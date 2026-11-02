@@ -4,7 +4,7 @@ Ein Claude-Skill, der aus einem Instagram-Reel oder TikTok-Kochvideo ein Rezept 
 
 ## Warum ich ihn gebaut habe
 
-Ich speichere viele Kochvideos, koche aber kaum eines nach. Die Mengen stehen verstreut in Caption, Einblendungen und Kommentaren, und für Einkauf, Budget und Protein-Tracking brauche ich sie strukturiert.
+Im Alltag ist man oft im Stress, und abends überfordert mich die fast endlose Auswahl an Rezepten, die ich mir gespeichert habe. Deshalb will ich mein Online-Kochbuch in Form von Videos hochladen und mir daraus eine Liste mit Abendessen für die Woche erstellen lassen. Dieser Skill ist der erste Schritt: Er macht aus einem Video ein Rezept, mit dem die Wochenplanung arbeiten kann. Tracking von Protein und Kosten habe ich als kleine Zusatzfunktion eingebaut.
 
 ## Wie er arbeitet
 
