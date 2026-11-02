@@ -27,6 +27,7 @@ Weitere Regeln:
 ## Wo er versagt
 
 - **Instagram** lässt sich ohne Developer-Token nicht automatisch auslesen. Man muss Caption oder Screenshots selbst einfügen.
+- **TikTok-Links** werden je nach Umgebung blockiert. Im Beispiel unten hat die Plattform den Abruf abgelehnt; der Skill hat dann wie vorgesehen nach Screenshots gefragt, statt einen Umweg zu suchen.
 - **Gesprochene Mengen** erkennt er nicht. Er liest Caption und Bildtext, nicht den Ton des Videos.
 - **Nährwerte und Kosten** sind Schätzungen aus gerundeten Richtwerten und typischen Supermarktpreisen, keine Laborwerte und keine Live-Preise. Hängen sie an einer unsicheren Menge (etwa fehlende Fleischmenge), steht das dabei.
 - **Portionen** sind oft nicht genannt. Dann schätzt er sie aus den Mengen und markiert das.
@@ -45,7 +46,32 @@ In Claude als Skill hinzufügen (Ordner `skill/` hochladen), dann einen TikTok-L
 
 ## Beispiel
 
-<!-- Hier einen echten Lauf einfügen: Link zum Video, die Rezeptkarte und das JSON. Nicht nachbauen, sondern einmal mit dem Skill laufen lassen und den Output kopieren. -->
+Echter Lauf vom 2. November 2026. Input: TikTok-Link von @brin.pirathapan. Der automatische Abruf wurde blockiert, deshalb lief der Skill über vier Screenshots der Caption.
+
+**Rezeptkarte (Auszug)**
+
+| Menge | Zutat | Hinweis |
+|---|---|---|
+| 0,25 g | Safran | |
+| 2 Stück | Knoblauchzehen | |
+| 1 TL | Chiliflocken | Caption: ½–1 TL ⚠ |
+| 1 Stück | Orange | nur 2 Stücke Schale verwendet |
+| 1 Stück | Schalotte | |
+| 200 g | Risottoreis | |
+| 200 ml | Weißwein | |
+| 700 ml | Hühner- oder Gemüsebrühe, heiß | Menge geschätzt ⚠ |
+| 50 g | Parmesan, gerieben | |
+| 600 g | Entenbrust (2 Stück) | Gewicht geschätzt ⚠ |
+
+**Pro Portion (geschätzt):** ~1.200 kcal · ~73 g Protein · ~9,40 €
+
+**Bitte prüfen:**
+- Die Brühmenge steht nicht in der Caption. Angenommen: 700 ml, die übliche Menge für 200 g Risottoreis.
+- Das Gewicht der Entenbrust fehlt. Angenommen: 2 × 300 g. Kalorien, Protein und vor allem die Kosten (Ente ca. 12 € von 18,80 €) hängen stark daran.
+- Die Portionen sind nicht genannt, 2 geschätzt aus 200 g Reis und 2 Entenbrüsten.
+- Chiliflocken: Die Caption nennt ½–1 TL, Schritt 2 nennt 1 TL.
+
+Das vollständige Ergebnis mit allen zwölf Schritten und dem JSON liegt in [`beispiele/safran-risotto-ente.md`](beispiele/safran-risotto-ente.md).
 
 ## Status
 
